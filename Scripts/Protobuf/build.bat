@@ -1,0 +1,1 @@
+C:\$\Protobuf\protoc.exe --csharp_out=.\ .\SocketProtocol.proto

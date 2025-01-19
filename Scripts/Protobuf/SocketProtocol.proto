@@ -1,0 +1,64 @@
+syntax = "proto3";
+package SocketProtocol;
+
+enum RequestCode
+{
+	RequestNone=0;
+	User=1;
+	Room=2;
+}
+
+enum ActionCode
+{
+	ActionNone=0;
+
+	QuickLogin=101;
+	Login=102;
+	Regist=103;
+	UpdateNickName=104;
+
+	CreateRoom=201;
+	FindRoom=202;
+	JoinRoom=203;
+	LeaveRoom=204;
+}
+
+enum ReturnCode
+{
+	ReturnNone=0;
+	Success=1;
+	Fail=2;
+}
+
+message MainPack
+{
+	RequestCode requestCode=1;
+	ActionCode actionCode=2;
+	ReturnCode returnCode=3;
+	repeated UserPack userPack=4;
+	repeated RoomPack roomPacks=5;
+}
+
+message UserPack
+{
+	int32 userId=1;
+	string nickName=2;
+	int32 roomId=3;
+}
+
+enum RoomState
+{
+	None=0;
+	Waiting=1;
+	Playing=2;
+}
+
+message RoomPack
+{
+	int32 roomId=1;
+	string roomName=2;
+	int32 roomMemberCapacity=3;
+	int32 roomMemberCount=4;
+	RoomState roomState=5;
+}
+	
