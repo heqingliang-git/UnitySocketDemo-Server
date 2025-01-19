@@ -26,7 +26,7 @@ namespace SocketServer
             listenSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
 
             //向操作系统申请一个可用的ip和端口用来通讯
-            listenSocket.Bind(new IPEndPoint(IPAddress.Parse("192.168.1.8"), 1011));
+            listenSocket.Bind(new IPEndPoint(IPAddress.Parse("127.0.0.1"), 1011));
 
             //设置最多3000个排队连接请求
             listenSocket.Listen(3000);
