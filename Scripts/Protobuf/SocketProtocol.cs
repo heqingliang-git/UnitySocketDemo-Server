@@ -9,47 +9,45 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace SocketProtocol
-{
+namespace SocketProtocol {
 
   /// <summary>Holder for reflection information generated from SocketProtocol.proto</summary>
-  public static partial class SocketProtocolReflection
-  {
+  public static partial class SocketProtocolReflection {
 
     #region Descriptor
     /// <summary>File descriptor for SocketProtocol.proto</summary>
-    public static pbr::FileDescriptor Descriptor
-    {
+    public static pbr::FileDescriptor Descriptor {
       get { return descriptor; }
     }
     private static pbr::FileDescriptor descriptor;
 
-    static SocketProtocolReflection()
-    {
+    static SocketProtocolReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChRTb2NrZXRQcm90b2NvbC5wcm90bxIOU29ja2V0UHJvdG9jb2wi9QEKCE1h",
+            "ChRTb2NrZXRQcm90b2NvbC5wcm90bxIOU29ja2V0UHJvdG9jb2wihgIKCE1h",
             "aW5QYWNrEjAKC3JlcXVlc3RDb2RlGAEgASgOMhsuU29ja2V0UHJvdG9jb2wu",
             "UmVxdWVzdENvZGUSLgoKYWN0aW9uQ29kZRgCIAEoDjIaLlNvY2tldFByb3Rv",
             "Y29sLkFjdGlvbkNvZGUSLgoKcmV0dXJuQ29kZRgDIAEoDjIaLlNvY2tldFBy",
             "b3RvY29sLlJldHVybkNvZGUSKgoIdXNlclBhY2sYBCADKAsyGC5Tb2NrZXRQ",
             "cm90b2NvbC5Vc2VyUGFjaxIrCglyb29tUGFja3MYBSADKAsyGC5Tb2NrZXRQ",
-            "cm90b2NvbC5Sb29tUGFjayI8CghVc2VyUGFjaxIOCgZ1c2VySWQYASABKAUS",
-            "EAoIbmlja05hbWUYAiABKAkSDgoGcm9vbUlkGAMgASgFIo8BCghSb29tUGFj",
-            "axIOCgZyb29tSWQYASABKAUSEAoIcm9vbU5hbWUYAiABKAkSGgoScm9vbU1l",
-            "bWJlckNhcGFjaXR5GAMgASgFEhcKD3Jvb21NZW1iZXJDb3VudBgEIAEoBRIs",
-            "Cglyb29tU3RhdGUYBSABKA4yGS5Tb2NrZXRQcm90b2NvbC5Sb29tU3RhdGUq",
-            "MgoLUmVxdWVzdENvZGUSDwoLUmVxdWVzdE5vbmUQABIICgRVc2VyEAESCAoE",
-            "Um9vbRACKpYBCgpBY3Rpb25Db2RlEg4KCkFjdGlvbk5vbmUQABIOCgpRdWlj",
-            "a0xvZ2luEGUSCQoFTG9naW4QZhIKCgZSZWdpc3QQZxISCg5VcGRhdGVOaWNr",
-            "TmFtZRBoEg8KCkNyZWF0ZVJvb20QyQESDQoIRmluZFJvb20QygESDQoISm9p",
-            "blJvb20QywESDgoJTGVhdmVSb29tEMwBKjMKClJldHVybkNvZGUSDgoKUmV0",
-            "dXJuTm9uZRAAEgsKB1N1Y2Nlc3MQARIICgRGYWlsEAIqLwoJUm9vbVN0YXRl",
-            "EggKBE5vbmUQABILCgdXYWl0aW5nEAESCwoHUGxheWluZxACYgZwcm90bzM="));
+            "cm90b2NvbC5Sb29tUGFjaxIPCgdjaGF0U3RyGAYgASgJIjwKCFVzZXJQYWNr",
+            "Eg4KBnVzZXJJZBgBIAEoBRIQCghuaWNrTmFtZRgCIAEoCRIOCgZyb29tSWQY",
+            "AyABKAUijwEKCFJvb21QYWNrEg4KBnJvb21JZBgBIAEoBRIQCghyb29tTmFt",
+            "ZRgCIAEoCRIaChJyb29tTWVtYmVyQ2FwYWNpdHkYAyABKAUSFwoPcm9vbU1l",
+            "bWJlckNvdW50GAQgASgFEiwKCXJvb21TdGF0ZRgFIAEoDjIZLlNvY2tldFBy",
+            "b3RvY29sLlJvb21TdGF0ZSoyCgtSZXF1ZXN0Q29kZRIPCgtSZXF1ZXN0Tm9u",
+            "ZRAAEggKBFVzZXIQARIICgRSb29tEAIqtQEKCkFjdGlvbkNvZGUSDgoKQWN0",
+            "aW9uTm9uZRAAEg4KClF1aWNrTG9naW4QZRIJCgVMb2dpbhBmEgoKBlJlZ2lz",
+            "dBBnEhIKDlVwZGF0ZU5pY2tOYW1lEGgSDwoKQ3JlYXRlUm9vbRDJARINCghG",
+            "aW5kUm9vbRDKARINCghKb2luUm9vbRDLARIOCglMZWF2ZVJvb20QzAESDQoI",
+            "Um9vbUNoYXQQzQESDgoJU3RhcnRHYW1lEM4BKjMKClJldHVybkNvZGUSDgoK",
+            "UmV0dXJuTm9uZRAAEgsKB1N1Y2Nlc3MQARIICgRGYWlsEAIqLwoJUm9vbVN0",
+            "YXRlEggKBE5vbmUQABILCgdXYWl0aW5nEAESCwoHUGxheWluZxACYgZwcm90",
+            "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
-          new pbr::GeneratedClrTypeInfo(new[] { typeof(global::SocketProtocol.RequestCode), typeof(global::SocketProtocol.ActionCode), typeof(global::SocketProtocol.ReturnCode), typeof(global::SocketProtocol.RoomState), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::SocketProtocol.MainPack), global::SocketProtocol.MainPack.Parser, new[]{ "RequestCode", "ActionCode", "ReturnCode", "UserPack", "RoomPacks" }, null, null, null, null),
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::SocketProtocol.RequestCode), typeof(global::SocketProtocol.ActionCode), typeof(global::SocketProtocol.ReturnCode), typeof(global::SocketProtocol.RoomState), }, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::SocketProtocol.MainPack), global::SocketProtocol.MainPack.Parser, new[]{ "RequestCode", "ActionCode", "ReturnCode", "UserPack", "RoomPacks", "ChatStr" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SocketProtocol.UserPack), global::SocketProtocol.UserPack.Parser, new[]{ "UserId", "NickName", "RoomId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::SocketProtocol.RoomPack), global::SocketProtocol.RoomPack.Parser, new[]{ "RoomId", "RoomName", "RoomMemberCapacity", "RoomMemberCount", "RoomState" }, null, null, null, null)
           }));
@@ -58,15 +56,13 @@ namespace SocketProtocol
 
   }
   #region Enums
-  public enum RequestCode
-  {
+  public enum RequestCode {
     [pbr::OriginalName("RequestNone")] RequestNone = 0,
     [pbr::OriginalName("User")] User = 1,
     [pbr::OriginalName("Room")] Room = 2,
   }
 
-  public enum ActionCode
-  {
+  public enum ActionCode {
     [pbr::OriginalName("ActionNone")] ActionNone = 0,
     [pbr::OriginalName("QuickLogin")] QuickLogin = 101,
     [pbr::OriginalName("Login")] Login = 102,
@@ -76,17 +72,17 @@ namespace SocketProtocol
     [pbr::OriginalName("FindRoom")] FindRoom = 202,
     [pbr::OriginalName("JoinRoom")] JoinRoom = 203,
     [pbr::OriginalName("LeaveRoom")] LeaveRoom = 204,
+    [pbr::OriginalName("RoomChat")] RoomChat = 205,
+    [pbr::OriginalName("StartGame")] StartGame = 206,
   }
 
-  public enum ReturnCode
-  {
+  public enum ReturnCode {
     [pbr::OriginalName("ReturnNone")] ReturnNone = 0,
     [pbr::OriginalName("Success")] Success = 1,
     [pbr::OriginalName("Fail")] Fail = 2,
   }
 
-  public enum RoomState
-  {
+  public enum RoomState {
     [pbr::OriginalName("None")] None = 0,
     [pbr::OriginalName("Waiting")] Waiting = 1,
     [pbr::OriginalName("Playing")] Playing = 2,
@@ -95,47 +91,42 @@ namespace SocketProtocol
   #endregion
 
   #region Messages
-  public sealed partial class MainPack : pb::IMessage<MainPack>
-  {
+  public sealed partial class MainPack : pb::IMessage<MainPack> {
     private static readonly pb::MessageParser<MainPack> _parser = new pb::MessageParser<MainPack>(() => new MainPack());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<MainPack> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor
-    {
+    public static pbr::MessageDescriptor Descriptor {
       get { return global::SocketProtocol.SocketProtocolReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor
-    {
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public MainPack()
-    {
+    public MainPack() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public MainPack(MainPack other) : this()
-    {
+    public MainPack(MainPack other) : this() {
       requestCode_ = other.requestCode_;
       actionCode_ = other.actionCode_;
       returnCode_ = other.returnCode_;
       userPack_ = other.userPack_.Clone();
       roomPacks_ = other.roomPacks_.Clone();
+      chatStr_ = other.chatStr_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public MainPack Clone()
-    {
+    public MainPack Clone() {
       return new MainPack(this);
     }
 
@@ -143,11 +134,9 @@ namespace SocketProtocol
     public const int RequestCodeFieldNumber = 1;
     private global::SocketProtocol.RequestCode requestCode_ = global::SocketProtocol.RequestCode.RequestNone;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SocketProtocol.RequestCode RequestCode
-    {
+    public global::SocketProtocol.RequestCode RequestCode {
       get { return requestCode_; }
-      set
-      {
+      set {
         requestCode_ = value;
       }
     }
@@ -156,11 +145,9 @@ namespace SocketProtocol
     public const int ActionCodeFieldNumber = 2;
     private global::SocketProtocol.ActionCode actionCode_ = global::SocketProtocol.ActionCode.ActionNone;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SocketProtocol.ActionCode ActionCode
-    {
+    public global::SocketProtocol.ActionCode ActionCode {
       get { return actionCode_; }
-      set
-      {
+      set {
         actionCode_ = value;
       }
     }
@@ -169,11 +156,9 @@ namespace SocketProtocol
     public const int ReturnCodeFieldNumber = 3;
     private global::SocketProtocol.ReturnCode returnCode_ = global::SocketProtocol.ReturnCode.ReturnNone;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SocketProtocol.ReturnCode ReturnCode
-    {
+    public global::SocketProtocol.ReturnCode ReturnCode {
       get { return returnCode_; }
-      set
-      {
+      set {
         returnCode_ = value;
       }
     }
@@ -184,8 +169,7 @@ namespace SocketProtocol
         = pb::FieldCodec.ForMessage(34, global::SocketProtocol.UserPack.Parser);
     private readonly pbc::RepeatedField<global::SocketProtocol.UserPack> userPack_ = new pbc::RepeatedField<global::SocketProtocol.UserPack>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::SocketProtocol.UserPack> UserPack
-    {
+    public pbc::RepeatedField<global::SocketProtocol.UserPack> UserPack {
       get { return userPack_; }
     }
 
@@ -195,205 +179,196 @@ namespace SocketProtocol
         = pb::FieldCodec.ForMessage(42, global::SocketProtocol.RoomPack.Parser);
     private readonly pbc::RepeatedField<global::SocketProtocol.RoomPack> roomPacks_ = new pbc::RepeatedField<global::SocketProtocol.RoomPack>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::SocketProtocol.RoomPack> RoomPacks
-    {
+    public pbc::RepeatedField<global::SocketProtocol.RoomPack> RoomPacks {
       get { return roomPacks_; }
     }
 
+    /// <summary>Field number for the "chatStr" field.</summary>
+    public const int ChatStrFieldNumber = 6;
+    private string chatStr_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other)
-    {
+    public string ChatStr {
+      get { return chatStr_; }
+      set {
+        chatStr_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
       return Equals(other as MainPack);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(MainPack other)
-    {
-      if (ReferenceEquals(other, null))
-      {
+    public bool Equals(MainPack other) {
+      if (ReferenceEquals(other, null)) {
         return false;
       }
-      if (ReferenceEquals(other, this))
-      {
+      if (ReferenceEquals(other, this)) {
         return true;
       }
       if (RequestCode != other.RequestCode) return false;
       if (ActionCode != other.ActionCode) return false;
       if (ReturnCode != other.ReturnCode) return false;
-      if (!userPack_.Equals(other.userPack_)) return false;
-      if (!roomPacks_.Equals(other.roomPacks_)) return false;
+      if(!userPack_.Equals(other.userPack_)) return false;
+      if(!roomPacks_.Equals(other.roomPacks_)) return false;
+      if (ChatStr != other.ChatStr) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode()
-    {
+    public override int GetHashCode() {
       int hash = 1;
       if (RequestCode != global::SocketProtocol.RequestCode.RequestNone) hash ^= RequestCode.GetHashCode();
       if (ActionCode != global::SocketProtocol.ActionCode.ActionNone) hash ^= ActionCode.GetHashCode();
       if (ReturnCode != global::SocketProtocol.ReturnCode.ReturnNone) hash ^= ReturnCode.GetHashCode();
       hash ^= userPack_.GetHashCode();
       hash ^= roomPacks_.GetHashCode();
-      if (_unknownFields != null)
-      {
+      if (ChatStr.Length != 0) hash ^= ChatStr.GetHashCode();
+      if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
       return hash;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString()
-    {
+    public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output)
-    {
-      if (RequestCode != global::SocketProtocol.RequestCode.RequestNone)
-      {
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (RequestCode != global::SocketProtocol.RequestCode.RequestNone) {
         output.WriteRawTag(8);
-        output.WriteEnum((int)RequestCode);
+        output.WriteEnum((int) RequestCode);
       }
-      if (ActionCode != global::SocketProtocol.ActionCode.ActionNone)
-      {
+      if (ActionCode != global::SocketProtocol.ActionCode.ActionNone) {
         output.WriteRawTag(16);
-        output.WriteEnum((int)ActionCode);
+        output.WriteEnum((int) ActionCode);
       }
-      if (ReturnCode != global::SocketProtocol.ReturnCode.ReturnNone)
-      {
+      if (ReturnCode != global::SocketProtocol.ReturnCode.ReturnNone) {
         output.WriteRawTag(24);
-        output.WriteEnum((int)ReturnCode);
+        output.WriteEnum((int) ReturnCode);
       }
       userPack_.WriteTo(output, _repeated_userPack_codec);
       roomPacks_.WriteTo(output, _repeated_roomPacks_codec);
-      if (_unknownFields != null)
-      {
+      if (ChatStr.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(ChatStr);
+      }
+      if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize()
-    {
+    public int CalculateSize() {
       int size = 0;
-      if (RequestCode != global::SocketProtocol.RequestCode.RequestNone)
-      {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int)RequestCode);
+      if (RequestCode != global::SocketProtocol.RequestCode.RequestNone) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) RequestCode);
       }
-      if (ActionCode != global::SocketProtocol.ActionCode.ActionNone)
-      {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int)ActionCode);
+      if (ActionCode != global::SocketProtocol.ActionCode.ActionNone) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ActionCode);
       }
-      if (ReturnCode != global::SocketProtocol.ReturnCode.ReturnNone)
-      {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int)ReturnCode);
+      if (ReturnCode != global::SocketProtocol.ReturnCode.ReturnNone) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ReturnCode);
       }
       size += userPack_.CalculateSize(_repeated_userPack_codec);
       size += roomPacks_.CalculateSize(_repeated_roomPacks_codec);
-      if (_unknownFields != null)
-      {
+      if (ChatStr.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ChatStr);
+      }
+      if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
       return size;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(MainPack other)
-    {
-      if (other == null)
-      {
+    public void MergeFrom(MainPack other) {
+      if (other == null) {
         return;
       }
-      if (other.RequestCode != global::SocketProtocol.RequestCode.RequestNone)
-      {
+      if (other.RequestCode != global::SocketProtocol.RequestCode.RequestNone) {
         RequestCode = other.RequestCode;
       }
-      if (other.ActionCode != global::SocketProtocol.ActionCode.ActionNone)
-      {
+      if (other.ActionCode != global::SocketProtocol.ActionCode.ActionNone) {
         ActionCode = other.ActionCode;
       }
-      if (other.ReturnCode != global::SocketProtocol.ReturnCode.ReturnNone)
-      {
+      if (other.ReturnCode != global::SocketProtocol.ReturnCode.ReturnNone) {
         ReturnCode = other.ReturnCode;
       }
       userPack_.Add(other.userPack_);
       roomPacks_.Add(other.roomPacks_);
+      if (other.ChatStr.Length != 0) {
+        ChatStr = other.ChatStr;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input)
-    {
+    public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
-      while ((tag = input.ReadTag()) != 0)
-      {
-        switch (tag)
-        {
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8:
-            {
-              RequestCode = (global::SocketProtocol.RequestCode)input.ReadEnum();
-              break;
-            }
-          case 16:
-            {
-              ActionCode = (global::SocketProtocol.ActionCode)input.ReadEnum();
-              break;
-            }
-          case 24:
-            {
-              ReturnCode = (global::SocketProtocol.ReturnCode)input.ReadEnum();
-              break;
-            }
-          case 34:
-            {
-              userPack_.AddEntriesFrom(input, _repeated_userPack_codec);
-              break;
-            }
-          case 42:
-            {
-              roomPacks_.AddEntriesFrom(input, _repeated_roomPacks_codec);
-              break;
-            }
+          case 8: {
+            RequestCode = (global::SocketProtocol.RequestCode) input.ReadEnum();
+            break;
+          }
+          case 16: {
+            ActionCode = (global::SocketProtocol.ActionCode) input.ReadEnum();
+            break;
+          }
+          case 24: {
+            ReturnCode = (global::SocketProtocol.ReturnCode) input.ReadEnum();
+            break;
+          }
+          case 34: {
+            userPack_.AddEntriesFrom(input, _repeated_userPack_codec);
+            break;
+          }
+          case 42: {
+            roomPacks_.AddEntriesFrom(input, _repeated_roomPacks_codec);
+            break;
+          }
+          case 50: {
+            ChatStr = input.ReadString();
+            break;
+          }
         }
       }
     }
 
   }
 
-  public sealed partial class UserPack : pb::IMessage<UserPack>
-  {
+  public sealed partial class UserPack : pb::IMessage<UserPack> {
     private static readonly pb::MessageParser<UserPack> _parser = new pb::MessageParser<UserPack>(() => new UserPack());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<UserPack> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor
-    {
+    public static pbr::MessageDescriptor Descriptor {
       get { return global::SocketProtocol.SocketProtocolReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor
-    {
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public UserPack()
-    {
+    public UserPack() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public UserPack(UserPack other) : this()
-    {
+    public UserPack(UserPack other) : this() {
       userId_ = other.userId_;
       nickName_ = other.nickName_;
       roomId_ = other.roomId_;
@@ -401,8 +376,7 @@ namespace SocketProtocol
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public UserPack Clone()
-    {
+    public UserPack Clone() {
       return new UserPack(this);
     }
 
@@ -410,11 +384,9 @@ namespace SocketProtocol
     public const int UserIdFieldNumber = 1;
     private int userId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int UserId
-    {
+    public int UserId {
       get { return userId_; }
-      set
-      {
+      set {
         userId_ = value;
       }
     }
@@ -423,11 +395,9 @@ namespace SocketProtocol
     public const int NickNameFieldNumber = 2;
     private string nickName_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string NickName
-    {
+    public string NickName {
       get { return nickName_; }
-      set
-      {
+      set {
         nickName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
@@ -436,30 +406,24 @@ namespace SocketProtocol
     public const int RoomIdFieldNumber = 3;
     private int roomId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int RoomId
-    {
+    public int RoomId {
       get { return roomId_; }
-      set
-      {
+      set {
         roomId_ = value;
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other)
-    {
+    public override bool Equals(object other) {
       return Equals(other as UserPack);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(UserPack other)
-    {
-      if (ReferenceEquals(other, null))
-      {
+    public bool Equals(UserPack other) {
+      if (ReferenceEquals(other, null)) {
         return false;
       }
-      if (ReferenceEquals(other, this))
-      {
+      if (ReferenceEquals(other, this)) {
         return true;
       }
       if (UserId != other.UserId) return false;
@@ -469,156 +433,127 @@ namespace SocketProtocol
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode()
-    {
+    public override int GetHashCode() {
       int hash = 1;
       if (UserId != 0) hash ^= UserId.GetHashCode();
       if (NickName.Length != 0) hash ^= NickName.GetHashCode();
       if (RoomId != 0) hash ^= RoomId.GetHashCode();
-      if (_unknownFields != null)
-      {
+      if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
       return hash;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString()
-    {
+    public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output)
-    {
-      if (UserId != 0)
-      {
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (UserId != 0) {
         output.WriteRawTag(8);
         output.WriteInt32(UserId);
       }
-      if (NickName.Length != 0)
-      {
+      if (NickName.Length != 0) {
         output.WriteRawTag(18);
         output.WriteString(NickName);
       }
-      if (RoomId != 0)
-      {
+      if (RoomId != 0) {
         output.WriteRawTag(24);
         output.WriteInt32(RoomId);
       }
-      if (_unknownFields != null)
-      {
+      if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize()
-    {
+    public int CalculateSize() {
       int size = 0;
-      if (UserId != 0)
-      {
+      if (UserId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(UserId);
       }
-      if (NickName.Length != 0)
-      {
+      if (NickName.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(NickName);
       }
-      if (RoomId != 0)
-      {
+      if (RoomId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(RoomId);
       }
-      if (_unknownFields != null)
-      {
+      if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
       return size;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(UserPack other)
-    {
-      if (other == null)
-      {
+    public void MergeFrom(UserPack other) {
+      if (other == null) {
         return;
       }
-      if (other.UserId != 0)
-      {
+      if (other.UserId != 0) {
         UserId = other.UserId;
       }
-      if (other.NickName.Length != 0)
-      {
+      if (other.NickName.Length != 0) {
         NickName = other.NickName;
       }
-      if (other.RoomId != 0)
-      {
+      if (other.RoomId != 0) {
         RoomId = other.RoomId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input)
-    {
+    public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
-      while ((tag = input.ReadTag()) != 0)
-      {
-        switch (tag)
-        {
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8:
-            {
-              UserId = input.ReadInt32();
-              break;
-            }
-          case 18:
-            {
-              NickName = input.ReadString();
-              break;
-            }
-          case 24:
-            {
-              RoomId = input.ReadInt32();
-              break;
-            }
+          case 8: {
+            UserId = input.ReadInt32();
+            break;
+          }
+          case 18: {
+            NickName = input.ReadString();
+            break;
+          }
+          case 24: {
+            RoomId = input.ReadInt32();
+            break;
+          }
         }
       }
     }
 
   }
 
-  public sealed partial class RoomPack : pb::IMessage<RoomPack>
-  {
+  public sealed partial class RoomPack : pb::IMessage<RoomPack> {
     private static readonly pb::MessageParser<RoomPack> _parser = new pb::MessageParser<RoomPack>(() => new RoomPack());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pb::MessageParser<RoomPack> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor
-    {
+    public static pbr::MessageDescriptor Descriptor {
       get { return global::SocketProtocol.SocketProtocolReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor
-    {
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public RoomPack()
-    {
+    public RoomPack() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public RoomPack(RoomPack other) : this()
-    {
+    public RoomPack(RoomPack other) : this() {
       roomId_ = other.roomId_;
       roomName_ = other.roomName_;
       roomMemberCapacity_ = other.roomMemberCapacity_;
@@ -628,8 +563,7 @@ namespace SocketProtocol
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public RoomPack Clone()
-    {
+    public RoomPack Clone() {
       return new RoomPack(this);
     }
 
@@ -637,11 +571,9 @@ namespace SocketProtocol
     public const int RoomIdFieldNumber = 1;
     private int roomId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int RoomId
-    {
+    public int RoomId {
       get { return roomId_; }
-      set
-      {
+      set {
         roomId_ = value;
       }
     }
@@ -650,11 +582,9 @@ namespace SocketProtocol
     public const int RoomNameFieldNumber = 2;
     private string roomName_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string RoomName
-    {
+    public string RoomName {
       get { return roomName_; }
-      set
-      {
+      set {
         roomName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
@@ -663,11 +593,9 @@ namespace SocketProtocol
     public const int RoomMemberCapacityFieldNumber = 3;
     private int roomMemberCapacity_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int RoomMemberCapacity
-    {
+    public int RoomMemberCapacity {
       get { return roomMemberCapacity_; }
-      set
-      {
+      set {
         roomMemberCapacity_ = value;
       }
     }
@@ -676,11 +604,9 @@ namespace SocketProtocol
     public const int RoomMemberCountFieldNumber = 4;
     private int roomMemberCount_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int RoomMemberCount
-    {
+    public int RoomMemberCount {
       get { return roomMemberCount_; }
-      set
-      {
+      set {
         roomMemberCount_ = value;
       }
     }
@@ -689,30 +615,24 @@ namespace SocketProtocol
     public const int RoomStateFieldNumber = 5;
     private global::SocketProtocol.RoomState roomState_ = global::SocketProtocol.RoomState.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SocketProtocol.RoomState RoomState
-    {
+    public global::SocketProtocol.RoomState RoomState {
       get { return roomState_; }
-      set
-      {
+      set {
         roomState_ = value;
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other)
-    {
+    public override bool Equals(object other) {
       return Equals(other as RoomPack);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(RoomPack other)
-    {
-      if (ReferenceEquals(other, null))
-      {
+    public bool Equals(RoomPack other) {
+      if (ReferenceEquals(other, null)) {
         return false;
       }
-      if (ReferenceEquals(other, this))
-      {
+      if (ReferenceEquals(other, this)) {
         return true;
       }
       if (RoomId != other.RoomId) return false;
@@ -724,158 +644,126 @@ namespace SocketProtocol
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode()
-    {
+    public override int GetHashCode() {
       int hash = 1;
       if (RoomId != 0) hash ^= RoomId.GetHashCode();
       if (RoomName.Length != 0) hash ^= RoomName.GetHashCode();
       if (RoomMemberCapacity != 0) hash ^= RoomMemberCapacity.GetHashCode();
       if (RoomMemberCount != 0) hash ^= RoomMemberCount.GetHashCode();
       if (RoomState != global::SocketProtocol.RoomState.None) hash ^= RoomState.GetHashCode();
-      if (_unknownFields != null)
-      {
+      if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
       return hash;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString()
-    {
+    public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output)
-    {
-      if (RoomId != 0)
-      {
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (RoomId != 0) {
         output.WriteRawTag(8);
         output.WriteInt32(RoomId);
       }
-      if (RoomName.Length != 0)
-      {
+      if (RoomName.Length != 0) {
         output.WriteRawTag(18);
         output.WriteString(RoomName);
       }
-      if (RoomMemberCapacity != 0)
-      {
+      if (RoomMemberCapacity != 0) {
         output.WriteRawTag(24);
         output.WriteInt32(RoomMemberCapacity);
       }
-      if (RoomMemberCount != 0)
-      {
+      if (RoomMemberCount != 0) {
         output.WriteRawTag(32);
         output.WriteInt32(RoomMemberCount);
       }
-      if (RoomState != global::SocketProtocol.RoomState.None)
-      {
+      if (RoomState != global::SocketProtocol.RoomState.None) {
         output.WriteRawTag(40);
-        output.WriteEnum((int)RoomState);
+        output.WriteEnum((int) RoomState);
       }
-      if (_unknownFields != null)
-      {
+      if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize()
-    {
+    public int CalculateSize() {
       int size = 0;
-      if (RoomId != 0)
-      {
+      if (RoomId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(RoomId);
       }
-      if (RoomName.Length != 0)
-      {
+      if (RoomName.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(RoomName);
       }
-      if (RoomMemberCapacity != 0)
-      {
+      if (RoomMemberCapacity != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(RoomMemberCapacity);
       }
-      if (RoomMemberCount != 0)
-      {
+      if (RoomMemberCount != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(RoomMemberCount);
       }
-      if (RoomState != global::SocketProtocol.RoomState.None)
-      {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int)RoomState);
+      if (RoomState != global::SocketProtocol.RoomState.None) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) RoomState);
       }
-      if (_unknownFields != null)
-      {
+      if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
       return size;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(RoomPack other)
-    {
-      if (other == null)
-      {
+    public void MergeFrom(RoomPack other) {
+      if (other == null) {
         return;
       }
-      if (other.RoomId != 0)
-      {
+      if (other.RoomId != 0) {
         RoomId = other.RoomId;
       }
-      if (other.RoomName.Length != 0)
-      {
+      if (other.RoomName.Length != 0) {
         RoomName = other.RoomName;
       }
-      if (other.RoomMemberCapacity != 0)
-      {
+      if (other.RoomMemberCapacity != 0) {
         RoomMemberCapacity = other.RoomMemberCapacity;
       }
-      if (other.RoomMemberCount != 0)
-      {
+      if (other.RoomMemberCount != 0) {
         RoomMemberCount = other.RoomMemberCount;
       }
-      if (other.RoomState != global::SocketProtocol.RoomState.None)
-      {
+      if (other.RoomState != global::SocketProtocol.RoomState.None) {
         RoomState = other.RoomState;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input)
-    {
+    public void MergeFrom(pb::CodedInputStream input) {
       uint tag;
-      while ((tag = input.ReadTag()) != 0)
-      {
-        switch (tag)
-        {
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8:
-            {
-              RoomId = input.ReadInt32();
-              break;
-            }
-          case 18:
-            {
-              RoomName = input.ReadString();
-              break;
-            }
-          case 24:
-            {
-              RoomMemberCapacity = input.ReadInt32();
-              break;
-            }
-          case 32:
-            {
-              RoomMemberCount = input.ReadInt32();
-              break;
-            }
-          case 40:
-            {
-              RoomState = (global::SocketProtocol.RoomState)input.ReadEnum();
-              break;
-            }
+          case 8: {
+            RoomId = input.ReadInt32();
+            break;
+          }
+          case 18: {
+            RoomName = input.ReadString();
+            break;
+          }
+          case 24: {
+            RoomMemberCapacity = input.ReadInt32();
+            break;
+          }
+          case 32: {
+            RoomMemberCount = input.ReadInt32();
+            break;
+          }
+          case 40: {
+            RoomState = (global::SocketProtocol.RoomState) input.ReadEnum();
+            break;
+          }
         }
       }
     }

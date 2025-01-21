@@ -21,6 +21,8 @@ enum ActionCode
 	FindRoom=202;
 	JoinRoom=203;
 	LeaveRoom=204;
+	RoomChat=205;
+	StartGame=206;
 }
 
 enum ReturnCode
@@ -37,6 +39,7 @@ message MainPack
 	ReturnCode returnCode=3;
 	repeated UserPack userPack=4;
 	repeated RoomPack roomPacks=5;
+	string chatStr=6;
 }
 
 message UserPack
